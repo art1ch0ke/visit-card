@@ -259,6 +259,7 @@ nav li a:hover {
   font-size: 1.2em;
 }
 .footer-social {
+  display: flex;
   margin: 15px;
   gap: 5px;
 }
