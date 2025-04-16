@@ -27,7 +27,7 @@ h3 {
 header {
   display: flex;
   height: 150px;
-  margin: 10px;
+  margin-bottom: 10px;
 }
 
 .title-block {
@@ -99,20 +99,41 @@ nav li a:hover {
   line-height: 20px;
 }
 
+#happy-choice {
+  display: inline-block;
+  text-decoration: none;
+  font-weight: bold;
+  color: #000;
+  transition: transform 0.15s color 0.15s;
+}
+
+#happy-choice:hover {
+  transform: translateY(-1px);
+  color:rgb(87, 82, 82);
+}
+
 .sidebar {
   width: 30%;
   padding: 20px;
 }
 
-.skills li {
+.skills li a {
+  display: inline-block;
   padding: 10px 0;
+  text-decoration: none;
   transition: transform .5s ease;
   cursor: pointer;
+  color: #000;
 }
 
-.skills li:hover {
+.skills li a:hover {
   transform: translateX(10px);
 }
+
+.sidebar ul {
+  margin-bottom: 10px;
+}
+
 
 /* .buttons-cites .ytube {
   background-color: rgb(204, 0, 0);
@@ -281,4 +302,85 @@ nav li a:hover {
 
 .hidden {
   display: none;
+}
+
+/* Для планшетов и экранов до 768px */
+@media (max-width: 768px) {
+  .container {
+    width: 90%;
+    border-width: 5px;
+  }
+
+  header {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .title-block,
+  .userpic {
+    width: 100%;
+    height: 100px;
+    margin: 0;
+  }
+
+  nav ul {
+    flex-direction: column;
+  }
+
+  nav li a {
+    border-right: none;
+    border-bottom: 1px solid rgb(209, 203, 203);
+    justify-content: center;
+  }
+
+  .content-wrapper {
+    flex-direction: column;
+  }
+
+  .content,
+  .sidebar {
+    width: 100%;
+    padding: 10px;
+  }
+
+  .footer-wrapper {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .footer-social {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+}
+
+/* Для телефонов до 480px */
+@media (max-width: 480px) {
+  .title-block {
+    font-size: 20px;
+  }
+
+  h3 {
+    font-size: 18px;
+  }
+
+  nav li a {
+    padding: 15px;
+    font-size: 0.9em;
+  }
+
+  #toggle-button {
+    font-size: 0.9em;
+    padding: 8px 16px;
+  }
+
+  .footer-logo {
+    font-size: 1.2em;
+  }
+
+  .social-btn img {
+    width: 24px;
+    height: 24px;
+  }
 }
